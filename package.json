@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/donkeycommerce/modal-ts/issues"
   },
-  "homepage": "https://github.com/donkeycommerce/modal-ts#readme"
+  "homepage": "https://github.com/donkeycommerce/modal-ts#readme",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "sweetalert2": "^10.3.5"
+  }
 }
