@@ -21,5 +21,9 @@
   },
   "dependencies": {
     "sweetalert2": "^10.3.5"
-  }
+  },
+  "files": [
+    "lib",
+    "src"
+  ]
 }
