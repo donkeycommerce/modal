@@ -15,12 +15,12 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private cancelCallback: Function|null = null
+    private cancelCallback: Function = () => {}
 
     /**
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private cancelButtonText: string|null = null
+    private cancelButtonText: string|undefined = undefined
 
     /**
      * The instance. Modal is a singleton.
@@ -34,7 +34,7 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private message: string|null = null
+    private message: string|undefined = undefined
 
     /**
      * The mode of model. Indicates the scope of modal.
@@ -47,7 +47,7 @@ class Modal
     /** 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private successButtonText: string|null = null
+    private successButtonText: string|undefined = undefined
 
     /**
      * The action to execute after click on modal success button
@@ -61,7 +61,7 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private title: string|null = null
+    private title: string|undefined = undefined
 
     /**
      * The type of modal. If is a toast or simple modal
@@ -158,11 +158,11 @@ class Modal
         return this.cancelCallback;
     }
 
-    public getCancelButtonText(): string {
+    public getCancelButtonText(): string|undefined {
         return this.cancelButtonText;
     }
 
-    public getMessage(): string {
+    public getMessage(): string|undefined {
         return this.message;
     }
 
@@ -170,7 +170,7 @@ class Modal
         return this.scope;
     }
 
-    public getSuccessButtonText(): string {
+    public getSuccessButtonText(): string|undefined {
         return this.successButtonText;
     }
 
@@ -178,7 +178,7 @@ class Modal
         return this.successCallback;
     }
 
-    public getTitle(): string {
+    public getTitle(): string|undefined {
         return this.title
     }
 

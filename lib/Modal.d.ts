@@ -81,12 +81,12 @@ declare class Modal {
      */
     getInstance(): Modal;
     getCancelCallback(): Function;
-    getCancelButtonText(): string;
-    getMessage(): string;
+    getCancelButtonText(): string | undefined;
+    getMessage(): string | undefined;
     getScope(): ModalScope;
-    getSuccessButtonText(): string;
+    getSuccessButtonText(): string | undefined;
     getSuccessCallback(): Function;
-    getTitle(): string;
+    getTitle(): string | undefined;
     getType(): ModalType;
     /**
      * Set the message.
