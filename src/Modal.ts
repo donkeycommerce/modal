@@ -15,12 +15,12 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private cancelCallback: Function = () => {}
+    private cancelCallback: Function|null = null
 
     /**
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private cancelButtonText: string = ''
+    private cancelButtonText: string|null = null
 
     /**
      * The instance. Modal is a singleton.
@@ -34,7 +34,7 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private message: string = ''
+    private message: string|null = null
 
     /**
      * The mode of model. Indicates the scope of modal.
@@ -47,7 +47,7 @@ class Modal
     /** 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private successButtonText: string = ''
+    private successButtonText: string|null = null
 
     /**
      * The action to execute after click on modal success button
@@ -61,7 +61,7 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private title: string = ''
+    private title: string|null = null
 
     /**
      * The type of modal. If is a toast or simple modal
