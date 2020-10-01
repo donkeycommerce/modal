@@ -5,7 +5,7 @@ import Swal, { SweetAlertOptions, SweetAlertResult }  from 'sweetalert2'
 
 class SwalAdapter implements ModalAdapterInterface {
     public close(instance: Modal) {
-        //
+        Swal.close()
     }
 
     public show(instance: Modal, extraConfig: any = {}) {

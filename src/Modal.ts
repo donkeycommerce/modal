@@ -42,7 +42,7 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private scope: ModalScope = ModalScope.SUCCESS
+    private scope: ModalScope|undefined
 
     /** 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
@@ -68,7 +68,7 @@ class Modal
      * 
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
-    private type: ModalType = ModalType.MESSAGE
+    private type: ModalType|undefined
 
     /*--------------------- from built-in(a) to user-defined(z)
     |       METHODS       |
@@ -81,6 +81,10 @@ class Modal
      */
     private constructor(adapter: ModalAdapterInterface) {
         this.adapter = adapter
+    }
+
+    public static close() {
+        Modal.instance.adapter.close(Modal.instance)
     }
 
     /**
@@ -166,7 +170,7 @@ class Modal
         return this.message;
     }
 
-    public getScope(): ModalScope {
+    public getScope(): ModalScope|undefined {
         return this.scope;
     }
 
@@ -182,7 +186,7 @@ class Modal
         return this.title
     }
 
-    public getType(): ModalType {
+    public getType(): ModalType|undefined {
         return this.type;
     }
 

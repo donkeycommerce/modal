@@ -59,6 +59,7 @@ declare class Modal {
      * @author Daniele Tulone <danieletulone.work@gmail.com>
      */
     private constructor();
+    static close(): void;
     /**
      * Create a new instance of Modal, reset previous instance
      *
@@ -83,11 +84,11 @@ declare class Modal {
     getCancelCallback(): Function;
     getCancelButtonText(): string | undefined;
     getMessage(): string | undefined;
-    getScope(): ModalScope;
+    getScope(): ModalScope | undefined;
     getSuccessButtonText(): string | undefined;
     getSuccessCallback(): Function;
     getTitle(): string | undefined;
-    getType(): ModalType;
+    getType(): ModalType | undefined;
     /**
      * Set the message.
      *
