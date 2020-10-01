@@ -22,13 +22,13 @@ class SwalAdapter implements ModalAdapterInterface {
             config.icon = instance.getScope()
         }
 
-        if (instance.getCancelCallback() != undefined) {
+        if (instance.getCancelButtonText() != undefined) {
             config.cancelButtonColor = '#d33'
             config.showCancelButton = true
             config.cancelButtonText = instance.getCancelButtonText()        
         }
 
-        if (instance.getSuccessCallback() != undefined) {
+        if (instance.getSuccessButtonText() != undefined) {
             config.confirmButtonText = instance.getSuccessButtonText()
         }
 
