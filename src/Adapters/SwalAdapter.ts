@@ -18,18 +18,20 @@ class SwalAdapter implements ModalAdapterInterface {
             config.toast = true
         }
 
-        if (instance.getScope() != undefined) {
-            config.icon = instance.getScope()
-        }
+        config.icon = instance.getScope()
 
         if (instance.getCancelButtonText() != undefined) {
             config.cancelButtonColor = '#d33'
             config.showCancelButton = true
             config.cancelButtonText = instance.getCancelButtonText()        
+        } else {
+           config.showCancelButton = false 
         }
 
         if (instance.getSuccessButtonText() != undefined) {
             config.confirmButtonText = instance.getSuccessButtonText()
+        }  else {
+            config.showConfirmButton = false 
         }
 
         Swal.fire(Object.assign(config, extraConfig)).then((res: SweetAlertResult) => {
